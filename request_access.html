@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request Access</title>
+        <meta name='description' content='Page in project'/>
+        <meta name='robots' content='noindex nofollow'/>
+        <meta http-equiv='author' content='mgalle'/>
+        <meta http-equiv='pragma' content='no-cache'/>
+    </head>
+    <body>
+        <h1>Request Access</h1>
+        <form action='php/req_access' method='post'>
+            <fieldset>
+                <legend>Contact</legend>
+                <p><label>First name: <input type='text' name='firstname' /></label></p>
+                <p><label>Last name: <input type='text' name='lastname' /></label></p>
+                <p><label>Email: <input type='email' name='email' /></label></p>
+                <p><label>Birthdate: <input type='date' name='birthday' /></label></p>
+                <p><label>Website: <input type='url' name='url' /></label></p>
+                <label><input type='radio' name='fac_or_student' value='faculty'/>Faculty</label>
+            <label><input type='radio' name='fac_or_student' value='student'/>Student</label>
+            </fieldset>
+            
+            <p>Do you drive a car?
+                <select name='drives_car'>
+                    <option value='no_answer' selected></option>
+                    <option value='yes'>Yes</option>
+                    <option value='no'>No</option>
+                </select>
+            </p>
+
+            <p>I currently ... (check any that apply)</p>
+            <label><input type='checkbox' name='involvement' value='none' />Have no involvement</label><br/>
+            <label><input type='checkbox' name='involvement' value='instructor' />Instructor in project</label><br/>
+            <label><input type='checkbox' name='involvement' value='instructor_other' />Instructor in another project</label><br/>
+            <label><input type='checkbox' name='involvement' value='student' />Student in project</label><br/>
+            <label><input type='checkbox' name='involvement' value='student_other' />Student in another project</label><br/>
+            <label><input type='checkbox' name='involvement' value='admin' />Administrator</label><br/>
+            <label><input type='checkbox' name='involvement' value='external' />External project reviewer</label><br/>
+        </form>
+        <p>Copyright &copy Michael Galle</p>
+    </body>
+</html>

@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>About Us</title>
+        <meta name='description' content='Page in project'/>
+        <meta name='robots' content='noindex nofollow'/>
+        <meta http-equiv='author' content='mgalle'/>
+        <meta http-equiv='pragma' content='no-cache'/>
     </head>
     <body>
         <h1>Project 6 - About</h1>
         <p>Welcome to the <i>about</i></p> page for <b>Project 6</b>
         <p>This is somethig I want to <em>emphasize</em> and this is a point I want to <strong>strongly make</strong></p>
+        <p>This is an element of the class <span class='important'>important</span>and so is this <span class='important'>word</span>. Later we will target these using CSS and JavaScript</p>
 
         <br/>
         <hr/>
@@ -18,14 +23,39 @@
         <br/>
         <hr/>
         
+        <h2>Introductory video</h2>
+
+        <!--Can pull this right from the Youtube video using 'share' and 'embed'-->
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/nlk99lcpLj0" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+
         <h2>Our Team</h2>
 
-        <p><b>Michael</b></p>
+        <p class='bio developer'><b>Michael</b></p>
         <p>Coding is fun</p>
 
-        <p><b>Ali</b></p>
+        <p class='bio'><b>Ali</b></p>
         <p>Coding is great</p>
 
- 
+        <hr />
+        <br />
+
+        <h2>Map to Project location on campus</h2>
+        <iframe
+            width='600'
+            height='450'
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6049354304923!2d-80.40029168475228!3d43.3852839791314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c75885d21f7a7%3A0xc775233807ea449f!2sConestoga%20College%20Cambridge%20Campus!5e0!3m2!1sen!2sca!4v1622053684774!5m2!1sen!2sca'
+            allowfullscreen
+            seamless
+        ></iframe> 
+        
+        <p>Copyright &copy Michael Galle</p>
     </body>
 </html>
