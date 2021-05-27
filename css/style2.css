@@ -1,0 +1,23 @@
+a:link.menu {
+    text-decoration: none;
+    color: red;
+    background-color: black;
+}
+
+a:visited.menu {
+    text-decoration: none;
+    color: red;
+    background-color: black;
+}
+
+a:hover.menu {
+    text-decoration: none;
+    color: yellow;
+    background-color: aquamarine;
+}
+
+a:active.menu {
+    text-decoration: none;
+    color: purple;
+    background-color: blanchedalmond;
+}

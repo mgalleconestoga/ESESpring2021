@@ -7,4 +7,16 @@ h1 {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-h2 {color:green;}
+h2 {
+    color:#145e5a;
+    background-color: rgb(210, 209, 216);
+}
+
+.week-headings {
+    color: rgba(194, 29, 29, 0.5);
+}
+
+#mike, #ali {
+    color:rgba(49, 62, 138, 0.4);
+}
+
