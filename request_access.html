@@ -6,19 +6,22 @@
         <meta name='robots' content='noindex nofollow'/>
         <meta http-equiv='author' content='mgalle'/>
         <meta http-equiv='pragma' content='no-cache'/>
+
+        <link href='css/style3.css' type='text/css' rel='stylesheet'/>
     </head>
     <body>
         <h1>Request Access</h1>
         <form action='php/req_access' method='post'>
             <fieldset>
                 <legend>Contact</legend>
-                <p><label>First name: <input type='text' name='firstname' /></label></p>
-                <p><label>Last name: <input type='text' name='lastname' /></label></p>
-                <p><label>Email: <input type='email' name='email' /></label></p>
-                <p><label>Birthdate: <input type='date' name='birthday' /></label></p>
-                <p><label>Website: <input type='url' name='url' /></label></p>
+                <p><label>First name: <input class='text' type='text' name='firstname' /></label></p>
+                <p><label>Last name: <input class='text' type='text' name='lastname' /></label></p>
+                <p><label>Email: <input class='text' type='email' name='email' /></label></p>
+                <p><label>Birthdate: <input class='text' type='date' name='birthday' /></label></p>
+                <p><label>Website: <input class='text' type='url' name='url' /></label></p>
                 <label><input type='radio' name='fac_or_student' value='faculty'/>Faculty</label>
-            <label><input type='radio' name='fac_or_student' value='student'/>Student</label>
+                <label><input type='radio' name='fac_or_student' value='student'/>Student</label> <br/><hr />
+                <textarea class='text' >Tell me something ...</textarea>
             </fieldset>
             
             <p>Do you drive a car?
@@ -37,6 +40,8 @@
             <label><input type='checkbox' name='involvement' value='student_other' />Student in another project</label><br/>
             <label><input type='checkbox' name='involvement' value='admin' />Administrator</label><br/>
             <label><input type='checkbox' name='involvement' value='external' />External project reviewer</label><br/>
+        
+            <input class='sub' type='submit' text='submit' />
         </form>
         <p>Copyright &copy Michael Galle</p>
     </body>

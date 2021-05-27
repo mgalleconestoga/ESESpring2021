@@ -1,0 +1,23 @@
+input.sub {
+    background-color: blue;
+    color: white;
+} 
+
+input.sub:hover {
+    background-color: rgb(234, 0, 255);
+    color: rgb(15, 9, 9);
+} 
+
+input.sub:active {
+    background-color: rgb(255, 94, 0);
+    color: rgb(50, 139, 50);
+} 
+
+input.text, textarea.text {
+    color:darkolivegreen;
+}
+
+input.text:focus, textarea.text:focus {
+    color:rgb(21, 27, 80);
+}
+

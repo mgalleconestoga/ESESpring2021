@@ -1,7 +1,11 @@
+/* Make menu links horizontal */
+li.h_menu {display:inline;}
+
 a:link.menu {
     text-decoration: none;
     color: red;
     background-color: black;
+    transition: all 0.5s;
 }
 
 a:visited.menu {
