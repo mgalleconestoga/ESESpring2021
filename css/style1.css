@@ -20,3 +20,21 @@ h2 {
     color:rgba(49, 62, 138, 0.4);
 }
 
+.mg {background-color: blue;}
+.at {background-color: orange;}
+.js {background-color: orangered;}
+
+table, td {
+    border-spacing: 3px;
+    border: 2px dashed #777;
+}
+
+th {width: 50px;}
+
+td:hover {background-color: seagreen;}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+

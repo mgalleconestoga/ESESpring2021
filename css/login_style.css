@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.text_label {       /* total width= 100 + 10 + 5 + 2 (border) = 117px */
+    float: left; 
+    width: 100px;
+    padding: 5px 10px 5px 5px;
+    text-align: right;
+    margin: 0;
+}
+
+.text_input {   /* total width = 200 + 5 + 2 = 207 px*/
+    width: 200px;
+    text-align: left;
+    padding: 5px 0px 5px 5px;
+    border: 1px solid black;
+    margin: 0;
+}
+
+div { 
+    padding: 0px 0px 0px 0px;
+    width: 327px;   
+}
+
+#submit {
+    float: right; 
+}
