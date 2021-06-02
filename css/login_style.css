@@ -12,7 +12,7 @@
     width: 200px;
     text-align: left;
     padding: 5px 0px 5px 5px;
-    /*border: 1px solid black; */   /*This line caused issues in the class!!! - bug in CSS? */  
+    /*border: 1px solid black; */   /*This line caused issues in the class!!! - bug in CSS when placing a border on a text input? */  
 }
 
 div {                   /* total width = 207+117 = 324 */
