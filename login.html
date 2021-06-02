@@ -12,14 +12,19 @@
     <body>
         <h1>Please Log In</h1>
         <form action='php/login.php' method='post' id='login'>
-            <div class='container'>
+            <div>
                 <label for='user' class='text_label'>Username:</label>
                 <input id='user' type="text" class='text_input' name='username' required/>
+            </div>
+            <div>
                 <label for='pass' class='text_label'>Password:</label>
                 <input id='pass' type="password" class='text_input' name='password' required/>
             </div>
-            <input id='submit' type='submit' value='Log in' />
-            <p><a href='request_access.html'>Request access</a></p>
+            <div>
+                <input id='submit' type='submit' value='Log in' />
+            </div>
+            
+            <div><a href='request_access.html'>Request access</div></p>
         </form>
         <p>Copyright &copy Michael Galle</p>
     </body>
