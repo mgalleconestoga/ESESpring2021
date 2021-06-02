@@ -7,42 +7,70 @@
         <meta http-equiv='author' content='mgalle'/>
         <meta http-equiv='pragma' content='no-cache'/>
 
-        <link href='css/style3.css' type='text/css' rel='stylesheet'/>
+        <link href='css/req_access_style.css' type='text/css' rel='stylesheet'/>
     </head>
     <body>
         <h1>Request Access</h1>
-        <form action='php/req_access' method='post'>
-            <fieldset>
-                <legend>Contact</legend>
-                <p><label>First name: <input class='text' type='text' name='firstname' /></label></p>
-                <p><label>Last name: <input class='text' type='text' name='lastname' /></label></p>
-                <p><label>Email: <input class='text' type='email' name='email' /></label></p>
-                <p><label>Birthdate: <input class='text' type='date' name='birthday' /></label></p>
-                <p><label>Website: <input class='text' type='url' name='url' /></label></p>
-                <label><input type='radio' name='fac_or_student' value='faculty'/>Faculty</label>
-                <label><input type='radio' name='fac_or_student' value='student'/>Student</label> <br/><hr />
-                <textarea class='text' >Tell me something ...</textarea>
-            </fieldset>
-            
-            <p>Do you drive a car?
-                <select name='drives_car'>
-                    <option value='no_answer' selected></option>
-                    <option value='yes'>Yes</option>
-                    <option value='no'>No</option>
-                </select>
-            </p>
-
-            <p>I currently ... (check any that apply)</p>
-            <label><input type='checkbox' name='involvement' value='none' />Have no involvement</label><br/>
-            <label><input type='checkbox' name='involvement' value='instructor' />Instructor in project</label><br/>
-            <label><input type='checkbox' name='involvement' value='instructor_other' />Instructor in another project</label><br/>
-            <label><input type='checkbox' name='involvement' value='student' />Student in project</label><br/>
-            <label><input type='checkbox' name='involvement' value='student_other' />Student in another project</label><br/>
-            <label><input type='checkbox' name='involvement' value='admin' />Administrator</label><br/>
-            <label><input type='checkbox' name='involvement' value='external' />External project reviewer</label><br/>
-        
-            <input class='sub' type='submit' text='submit' />
-        </form>
+        <form action="php/req_access.php" method="post">
+			<fieldset>
+				<legend>Contact Details</legend>
+				<div>
+					<label for="fname" class="text_label" >First Name:</label>
+					<input id="fname" class="text_input" type="text" name="firstname"  /> 
+				</div>
+				<div>
+					<label for="lname" class="text_label">Last Name:</label>  
+					<input id="lname" class="text_input" type="text" name="lastname"  /> 
+				</div>
+				<div>
+					<label for="email" class="text_label">Email:</label>     
+					<input id="email" class="text_input" type="email" name="email" /> 
+				</div>
+				<div>
+					<label for="website" class="text_label">Website:</label>    
+					<input id="website" class="text_input" type="url" name="url" /> 
+				</div>
+				<div>
+					<label for="bdate" class="text_label">Birth date:</label> 
+					<input id="bdate" class="text_input" type="date" name="birthday" /> 
+				</div>
+				
+				<div>
+					<span class="text_label">Request type:</span>
+					<input id="faculty" type="radio" name="fac_or_student" value="faculty" /> 
+					<label for="faculty">Faculty</label>
+					<input id="student" type="radio" name="fac_or_student" value="student" /> 
+					<label for="student">Student</label><br />
+				</div>
+			</fieldset>
+			
+			<p>I currently ... (check all that apply)</p>
+			<label><input type="checkbox" name="involvement" value="none" /> Have no involment in Project </label> <br />
+			<label><input type="checkbox" name="involvement" value="instructor" /> An instructor in this Project</label> <br />
+			<label><input type="checkbox" name="involvement" value="instructor_other" /> An instructor in a different Project</label> <br />
+			<label><input type="checkbox" name="involvement" value="student" /> A student in this Project</label> <br />
+			<label><input type="checkbox" name="involvement" value="student_other" /> A student in a different Project </label><br />
+			<label><input type="checkbox" name="involvement" value="admin" /> A College Administrator </label> <br />
+			<label><input type="checkbox" name="involvement" value="external" /> An external reviewer </label><br />
+			
+			<p>Do you drive a car?
+			<select name="drives_car">
+				<option value="no_answer" selected></option>
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</select>
+			</p>
+			
+			<p>Files you would like to include in your request 
+			<input type="file" name="file_uploaded" />
+			
+			<div>
+				<p>Tell us a bit about yourself</p>
+				<textarea name="comments" class="text">Please enter your comments here ...</textarea><br />
+				<input id="submit" type="submit" value="Submit Request" />
+			</div>
+		</form>
+		<br />
         <p>Copyright &copy Michael Galle</p>
     </body>
 </html>
