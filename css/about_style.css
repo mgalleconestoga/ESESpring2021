@@ -1,4 +1,9 @@
 header, section, footer, aside, nav, article, figure { display:block; }
 
+/* Example media query for non-standard small screen size */
 
+@media (min-width:900px) {
+    h1 {color: blue;}
+    #map {display:none}
+} 
 
