@@ -6,56 +6,107 @@
         <meta name='robots' content='noindex nofollow'/>
         <meta http-equiv='author' content='mgalle'/>
         <meta http-equiv='pragma' content='no-cache'/>
+        <meta name='viewport' content='width=device-width, intial-scale=1'/>
+
+        <!--Bootstrap CSS/JS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <!-- Custom CSS-->
+        <link src='css/about_style.css' type='text/css' rel='stylesheet'/>
+        <!--[if lt IE 9]>
+            <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+        <![endif] -->
+
     </head>
     <body>
-        <h1>Project 6 - About</h1>
-        <p>Welcome to the <i>about</i></p> page for <b>Project 6</b>
-        <p>This is somethig I want to <em>emphasize</em> and this is a point I want to <strong>strongly make</strong></p>
-        <p>This is an element of the class <span class='important'>important</span>and so is this <span class='important'>word</span>. Later we will target these using CSS and JavaScript</p>
+        <div id='page' class='container'>
+            <header>
+                <nav>
+    
+                </nav>
+            </header>
+            <article>
+                <h1>Project 6 - About</h1>
 
-        <br/>
-        <hr/>
-        
-        <h2>Subheading</h2>
-        <p>E = mc<sup>2</sup></p>
-        <p>The chemical formula for water is H<sub>2</sub>O</p>
+                <div class='row'>
+                    <div class='col-xs-12 col-md-4'>
+                        <p>Welcome to the <i>about</i> page for <b>Project 6</b></p>
+                    </div>
+                    <div class='col-xs-12 col-md-4'>
+                        <p>This is somethig I want to <em>emphasize</em> and this is a point I want to <strong>strongly make</strong></p>
+                    </div>
+                    <div class='col-xs-12 col-md-4'>
+                        <p>This is an element of the class <span class='important'>important</span>and so is this <span class='important'>word</span>. Later we will target these using CSS and JavaScript</p>
+                    </div>
+                </div>
+                
+                <br/>
+                <hr/>
+            </article>
+            
+            <article>
+                <h2>Subheading</h2>
+                <p>E = mc<sup>2</sup></p>
+                <p>The chemical formula for water is H<sub>2</sub>O</p>
+    
+                <br/>
+                <hr/>
+            </article>
+            
+            <aside>
 
-        <br/>
-        <hr/>
-        
-        <h2>Introductory video</h2>
+                <div class='row'>
+                    <div class='col-xs-12 col-md-6 col-lg-4'>
+                        <h2>Introductory video</h2>
+                        <!--Can pull this right from the Youtube video using 'share' and 'embed'-->
+                        <iframe 
+                            width="300" 
+                            src="https://www.youtube.com/embed/nlk99lcpLj0" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class='col-xs-12 col-md-6 col-lg-4'>
+                        <article>
+                            <h2>Our Team</h2>
+                            <p class='bio developer'><b>Michael</b></p>
+                            <p>Coding is fun</p>
+                            <p class='bio'><b>Ali</b></p>
+                            <p>Coding is great</p>
+                            
+                            <br />
+                        </article>
+                    </div>
+                    <div class='col-xs-12 col-md-12 col-lg-4'>
+                        <aside>
+                            <h2>Map to Project location on campus</h2>
+                            <iframe
+                                width='300'
+                                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6049354304923!2d-80.40029168475228!3d43.3852839791314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c75885d21f7a7%3A0xc775233807ea449f!2sConestoga%20College%20Cambridge%20Campus!5e0!3m2!1sen!2sca!4v1622053684774!5m2!1sen!2sca'
+                                allowfullscreen
+                                seamless
+                            ></iframe> 
+                        </aside>
+                    </div>
+                    <hr />
+                </div>
 
-        <!--Can pull this right from the Youtube video using 'share' and 'embed'-->
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/nlk99lcpLj0" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+            </aside>
+            
+            <footer>
+                <div class='row'>
+                    <div class='col-xs-12'>
+                        <p>Copyright &copy Michael Galle</p>
+                    </div>
+                    
+                </div>
+                
+            </footer>
+    
+     
+        </div>
 
-        <h2>Our Team</h2>
-
-        <p class='bio developer'><b>Michael</b></p>
-        <p>Coding is fun</p>
-
-        <p class='bio'><b>Ali</b></p>
-        <p>Coding is great</p>
-
-        <hr />
-        <br />
-
-        <h2>Map to Project location on campus</h2>
-        <iframe
-            width='600'
-            height='450'
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2899.6049354304923!2d-80.40029168475228!3d43.3852839791314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c75885d21f7a7%3A0xc775233807ea449f!2sConestoga%20College%20Cambridge%20Campus!5e0!3m2!1sen!2sca!4v1622053684774!5m2!1sen!2sca'
-            allowfullscreen
-            seamless
-        ></iframe> 
-        
-        <p>Copyright &copy Michael Galle</p>
     </body>
 </html>
