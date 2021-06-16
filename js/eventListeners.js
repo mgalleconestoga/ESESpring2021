@@ -2,12 +2,12 @@
 var elUsername = document.getElementById('username');
 var elMsg = document.getElementById('feedback');
 
-function checkUsername() {
-    if (elUsername.value.length <= 6) {
-        elMsg.innerHTML = '<p>Enter username with 6 or more characters</p>';
+function checkUsername(minLength) {
+    if (elUsername.value.length <= minLength) {
+        elMsg.innerHTML = '<p>Enter username with ' + minLength + ' or more characters</p>';
     } else {
         elMsg.innerHTML = '';           // Clear any error msg
     }
 }
 
-elUsername.addEventListener('blur', checkUsername, false);
+elUsername.addEventListener('blur', function() {checkUsername(10) }, false);
