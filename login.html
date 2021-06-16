@@ -13,8 +13,8 @@
         <h1>Please Log In</h1>
         <form action='php/login.php' method='post' id='login'>
             <div>
-                <label for='user' class='text_label'>Username:</label>
-                <input id='user' type="text" class='text_input' name='username' required/>
+                <label for='username' class='text_label'>Username:</label>
+                <input id='username' type="text" class='text_input' name='username' required/>
             </div>
             <div>
                 <label for='pass' class='text_label'>Password:</label>
@@ -24,8 +24,16 @@
                 <input id='submit' type='submit' value='Log in' />
             </div>
             
-            <div><a href='request_access.html'>Request access</div></p>
+            <div><a href='request_access.html'>Request access</a></div>      
         </form>
+        <div>
+            <br/>
+            <p>Error messages: </p>
+            <br/>
+            <p id='feedback'></p>
+        </div>
+        <br/><br/>
         <p>Copyright &copy Michael Galle</p>
+        <script src='js/eventListeners.js'></script>
     </body>
 </html>
