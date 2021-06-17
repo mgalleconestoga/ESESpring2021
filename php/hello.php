@@ -1,4 +1,6 @@
 <?php
-    //require '../index.html';
-    echo 'hello world';
+    require '../index.html';
+    $str = 'hello world!';
+
+    echo strtoupper($str);
 ?>
