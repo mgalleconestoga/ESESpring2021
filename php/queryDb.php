@@ -2,7 +2,7 @@
 
 // Connect to database by instantiating a PHP Database Object (PDO)
 $db = new PDO(
-    'mysql:host=127.0.0.1;dbname=elevator',     // Database name
+    'mysql:host=127.0.0.1;dbname=joinExample',     // Database name either 'elevator' or 'joinExample'
     'michaelG',                                 // username
     'myPassword'                                // Password
 );
@@ -68,7 +68,7 @@ echo '<br/><br/><br/>';
 */
 
 // Demo #4 -Adding data using parameters (Method #2 - bindValue())
-
+/*
 $query = 'SELECT * FROM elevatorNetwork WHERE nodeID = :nodeID';
 
 $statement = $db->prepare($query); 
@@ -82,6 +82,19 @@ foreach($rows as $row) {
     var_dump($row);
     echo "<br/>";
 }
+*/
 
+// Demo 5 - Join Queries
+
+$query = 'SELECT table1.nodeID, table1.status, table1.currentFloor, table2.requestedFloor, table2.otherInfo
+          FROM table1, table2
+          WHERE table1.nodeID = table2.nodeID'; 
+
+$rows = $db->query($query);
+
+foreach ($rows as $row) {
+    var_dump($row);
+    echo "<br/><br/>";
+}
 
 ?>
