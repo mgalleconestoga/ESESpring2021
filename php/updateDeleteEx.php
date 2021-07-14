@@ -52,30 +52,38 @@ function update_elevatorNetwork(int $node_ID, int $new_status = 1): void {
         WHERE nodeID = :id'; 
 
         $statement = $db->prepare($query); 
-        //$statement->bindValue('fieldName', $fieldName);
         $statement->bindValue('stat', $new_status); 
         $statement->bindValue('id', $node_ID);
-        if(!$statement->execute()) {
-            throw new Exception('Error - statement did not successfully execute');
+        $statement->execute();
+        
+        // Return number of rows that were updated
+        $count = $statement->rowCount();
+        echo $count;
+        echo "<br/><br/>";
+
+        // If no rows were affected by the update statement then throw error
+        if($count == 0) {
+            throw new Exception('Error - Database unchanged');
         }
-        echo "<br/><br/>Success - database updated<br/><br/>";
+        echo "<br/><br/>Success - Database updated<br/><br/>";
         $db->commit(); 
          
     } catch (Exception $e) {
-        echo "<br/><br/>Error - statement did not execute successfully<br/><br/>";
+        echo "<br/><br/>Error - Database unchanged<br/><br/>";
         $db->rollBack(); 
     }
+
 }
 
 // Start program
-
-update_elevatorNetwork(1, 6);       // Should succeed
-update_elevatorNetwork(1000, 6);    // Should fail
+update_elevatorNetwork(1, 15);       // Should succeed if nodeID = 1 does not have status = 15
+echo '<br/><br/>';
+update_elevatorNetwork(1000, 6);    // Should fail since thre is no nodeID == 1000
 
 
 
 // Show table 
-
+/*
 $db = new PDO(
     'mysql:host=127.0.0.1;dbname=elevator',     // Database name
     'michaelG',                                 // username
@@ -91,5 +99,5 @@ foreach ($rows as $row) {
     var_dump($row);
     echo '<br/><br/>';
 }
-
+*/
 ?>
