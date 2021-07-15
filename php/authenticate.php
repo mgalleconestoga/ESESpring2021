@@ -31,6 +31,7 @@
         echo "<p>File does not exist</p>";
     }
     */
+  
 
     // Checking input credentials against a database (if using this, comment out the above flat file code) 
     if(TRUE) {

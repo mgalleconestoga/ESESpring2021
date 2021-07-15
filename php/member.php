@@ -56,7 +56,8 @@
             $rows = $db->query($query2); 
             echo "DATE  |   TIME    |   NODEID  |   STATUS  |   CURRENTFLOOR    |   REQUESTED FLOOR     |   OTHERINFO <br/>";
             foreach ($rows as $row) { 
-                echo $row['date'] . " | " . $row['time'] . " | " . $row['nodeID'] . " | " . $row['status'] . " | " . $row['currentFloor'] . " | " . $row['requestedFloor'] . " | " . $row['otherInfo'];
+                echo $row['date'] . " | " . $row['time'] . " | " . $row['nodeID'] . " | " . $row['status'] . " | " . $row['currentFloor'] 
+                                  . " | " . $row['requestedFloor'] . " | " . $row['otherInfo'];
                 echo '<br/>';
             }       
 
