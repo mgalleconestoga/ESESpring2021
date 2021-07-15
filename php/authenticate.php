@@ -6,7 +6,7 @@
     $password = $_POST['password']; 
     $authenticated = false; 
 
-
+    // Checking input credentiasl against a flat file (used to store authenticated user credentials)
     if(file_exists('../JSON/users.json')){
         $contents = file_get_contents('../JSON/users.json');
         $usersArray = json_decode($contents, true);                 // true means php array
@@ -29,9 +29,16 @@
         echo "<p>File does not exist</p>";
     }
     
+    // Checking input credentials against a database (if using this, comment out the above flat file code)
+
+
+
+
+
+    // Once a user has been authenticated
 
     if($authenticated) {
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $username;   // set some session variables - could set $_SESSION['authenticated'] = true;
         $_SESSION['password'] = $password; 
 
         echo '<h2>Congrats ' . $username . ' you are authenticated</h2>';
