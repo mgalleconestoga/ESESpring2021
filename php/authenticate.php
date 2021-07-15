@@ -4,9 +4,11 @@
     // Get data submitted in the form
     $username = $_POST['username'];
     $password = $_POST['password']; 
-    $authenticated = false; 
+    $authenticated = FALSE; 
 
+    /* 
     // Checking input credentiasl against a flat file (used to store authenticated user credentials)
+
     if(file_exists('../JSON/users.json')){
         $contents = file_get_contents('../JSON/users.json');
         $usersArray = json_decode($contents, true);                 // true means php array
@@ -28,13 +30,30 @@
     } else {
         echo "<p>File does not exist</p>";
     }
+    */
+  
+
+    // Checking input credentials against a database (if using this, comment out the above flat file code) 
+    if(TRUE) {
+        // Connect to $db
+        $db = new PDO(
+            'mysql:host=127.0.0.1;dbname=elevator',     // Database name
+            'michaelG',                                 // username
+            'myPassword'                                // Password
+        );
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        // Query the db to compare to the input username and password
+        $query2 = 'SELECT * FROM authorizedUsers'; 
+        $rows = $db->query($query2); 
+        foreach ($rows as $row) { 
+            if($username == $row['username'] && $password == $row['password']) {
+                $authenticated = TRUE; 
+            }
+        }
+    }
+
     
-    // Checking input credentials against a database (if using this, comment out the above flat file code)
-
-
-
-
-
     // Once a user has been authenticated
 
     if($authenticated) {
